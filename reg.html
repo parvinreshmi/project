@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="js/bootstrap.js">
+        <link rel="stylesheet" type="text/css" href="stylee.css">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <title>candid</title>
+        <script>
+            function checkname() {
+                nameexp = /^[a-zA-Z ]{3,10}$/;
+                custname = document.getElementById("NAME").value;
+                // alert(custname);
+    
+                if (nameexp.test(custname)) {
+                    document.getElementById('nameerrormessage').style.visibility = 'hidden'; 
+                }
+                else {
+                    document.getElementById('nameerrormessage').style.visibility = 'visible';
+                    document.getElementById('nameerrormessage').innerText = "Enter Valid Name";
+                }
+            }
+            function checkemail() {
+           
+            emailexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+            custemail = document.getElementById("EMAIL").value;
+            //alert(custemail);
+
+            if (emailexp.test(custemail)) {
+                document.getElementById('emailerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('emailerrormessage').style.visibility = 'visible';
+                document.getElementById('emailerrormessage').innerText = "Enter Valid Email ID";
+            }
+        } 
+        function checkpassword() {
+            passwordexp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{4,8}$/; 
+            custpassword = document.getElementById("PASSWORD").value;
+            // alert(custpassword);
+
+            if (passwordexp.test(custpassword)) {
+                document.getElementById('passerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('passerrormessage').style.visibility = 'visible';
+                document.getElementById('passerrormessage').innerText = "Enter Valid Password";
+            }
+        }
+        function checkpassword() {
+            passwordexp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{4,8}$/; 
+            custpassword = document.getElementById("RETYPE PASSWORD").value;
+            // alert(custpassword);
+
+            if (passwordexp.test(custpassword)) {
+                document.getElementById('passerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('passerrormessage').style.visibility = 'visible';
+                document.getElementById('passerrormessage').innerText = "Enter Valid Password";
+            }
+        }
+        </script>
+
+
+    </head>
+    <body>
+      <div>
+         <nav class="navbar navbar-expand-lg navbar-light">
+            <a  class="navbar-brand" href="#">Candid</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reg.html">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+     
+                   
+                </ul>
+            </div>
+        </nav>
+        <div align = "center" class="container">
+            <div class="row">
+         
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                 <p class="login-box-msg">Register</p>
+                 <div class="mt-4">
+                    <form action="#" name='registration'>
+                        <div class="form-group">
+                 <label class="lebel col-mod-3 control-lebel">NAME</label>
+                    <div class="col-md-9">
+                        <input type="text" onblur="checkname()" class="from-control" id="NAME"
+                        name="fullname" placeholder="Enter your Full name" required="required">
+                        <div class="text-danger font-weight-bold" id="nameerrormessage"></div>
+
+                    </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="lebel col-mod-3 control-lebel">EMAIL</label>
+                    <div class="col-md-9">
+                        <input type="email" onblur="checkemail()" class="form-control" id="EMAIL"
+                            name="email" placeholder="Enter Your Email" required="required">
+                        <div class="text-danger font-weight-bold" id="emailerrormessage"></div>
+                    </div>
+                 </div>
+                
+                 <div class="form-group">
+                    <label class="lebel col-mod-3 control-lebel">PASSWORD</label>
+                    <div class="col-md-9">
+                    <input type="password" onblur="checkpassword()" class="form-control" id="PASSWORD" name="password"
+                        placeholder="Enter password" required="required" >
+                    <div><h3> Digit,1 LowerCase,1 UpperCase. Min 4 - Max 8</h3></div>
+                    <div class="text-danger font-weight-bold" id="passerrormessage"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="lebel col-mod-3 control-lebel">RETYPE PASSWORD</label>
+                    <div class="col-md-9">
+                    <input type="password" onblur="checkpassword()" class="form-control" id="PASSWORD" name="password"
+                        placeholder="Enter password" required="required">
+                    <div class="text-danger font-weight-bold" id="passerrormessage"></div>
+                </div>
+                            <div class="row">
+                              <div class="col-8">
+                                  <div class="icheck-primary">
+                                     <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                                     <label for="agreeTerms">
+                                         <h1>I agree to the <a href="#">terms</a></h1>
+                                     </label>
+                                   </div>
+                              </div>
+                             <!-- /.col -->
+                             <div class="col-4">
+                                 <button type="submit" class="btn btn-primary btn-block">Register</button>
+                             </div>
+                              <!-- /.col -->
+                           </div>
+                           </form>
+        
+                             <h2><a href="login.html" class="text-center">I already have a membership</a></h2>
+                            </br>
+                        </br>
+                    </br>
+                 </div>
+                          </div>
+                       </div>
+                   </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>     
+    </body>
+</html>
